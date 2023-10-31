@@ -28,7 +28,7 @@
     'author': 'Odoo Master',
     'company': 'Odoo Master',
     'website': "https://www.odoomaster.net",
-    'category': 'Inventory',
+    'category': 'Extra Tools',
     'maintainer': 'Odoo Master',
     'depends': [],
     'data': ['views/ir_cron.xml',],
