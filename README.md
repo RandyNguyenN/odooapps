@@ -1,0 +1,2 @@
+# odooapps
+My odoo apps
