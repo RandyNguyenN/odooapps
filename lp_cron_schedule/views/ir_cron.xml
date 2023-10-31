@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="cron_run_schedule" model="ir.cron">
+        <field name="name">Action Schedule</field>
+        <field name="active" eval="False" />
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="model_id" ref="lp_cron_schedule.model_run_action_schedule" />
+        <field name="state">code</field>
+        <field name="code">model.run_function()</field>
+    </record>
+</odoo>

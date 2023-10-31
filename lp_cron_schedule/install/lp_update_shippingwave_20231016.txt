@@ -1,0 +1,20 @@
+CREATE OR REPLACE FUNCTION lp_update_shippingwave()
+RETURNS void AS $$
+DECLARE
+    rec_record RECORD;
+BEGIN
+    FOR rec_record IN (SELECT pw.id, pw.carrier_id, pw.master_tracking_reference
+                       FROM stock_picking sp
+                       JOIN picking_wave pw ON sp.wave_id = pw.id
+                       WHERE (sp.carrier_id IS NULL OR sp.carrier_id = 0)
+                          OR (sp.carrier_tracking_ref IS NULL OR sp.carrier_tracking_ref = ''))
+    LOOP
+        -- Cập nhật bảng stock_picking dựa trên bảng picking_wave
+        UPDATE stock_picking
+        SET
+            carrier_id = rec_record.carrier_id,
+            carrier_tracking_ref = rec_record.master_tracking_reference
+        WHERE wave_id = rec_record.id;
+    END LOOP;
+END;
+$$ LANGUAGE plpgsql;

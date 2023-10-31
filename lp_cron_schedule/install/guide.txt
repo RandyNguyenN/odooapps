@@ -1,0 +1,6 @@
+HƯỚNG DẪN CÀI ĐẶT CRON
+Cron này thực hiện việc cập nhật giá trị Carrier và Tracking
+
+1. Cài đặt app Lovepop Shipping Wave Cron
+2. Tạo function lp_update_shippingwave()
+3. Cấu hình Schedule Action
