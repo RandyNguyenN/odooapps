@@ -21,7 +21,7 @@
 #############################################################################
 {
     'name': 'Simple Scheduled Actions',
-    'version': '15.0.1.0.0',
+    'version': '14.0.1.0.0',
     'summary': """Simple Scheduled Actions""",
     'description': """This Module Scheduled Actions in Odoo allows users to easily define and manage automated functions on a scheduled basis. 
     Instead of performing tasks manually, users can utilize this module to call specific functions and actions at regular intervals or specific times.""",
